@@ -1,4 +1,5 @@
 randomise()
+global.targetPanel = obj_PanelArray
 xCord = irandom_range(1,14)
 yCord = irandom_range(1,14)
 obj_BattleController.battleGrid[xCord,yCord].entity = id;

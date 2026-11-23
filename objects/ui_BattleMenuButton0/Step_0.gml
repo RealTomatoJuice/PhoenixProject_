@@ -13,6 +13,12 @@ switch(state){
 	case("gun"):
 		x = origin.x + 96
 		y = origin.y + 16
+		if(global.activeCombatant.gun != "none"){
+			if(position_meeting(mouse_x,mouse_y,self)&&mouse_check_button_pressed(mb_left)){
+				global.activeCombatant.actionState = "gun"
+				show_debug_message("actionState changed")
+			}
+		}
 	break;
 	
 	case("magic"):

@@ -8,7 +8,7 @@ function PanelCheckOccupied(_inst,_xMod,_yMod){
 }	
 
 
-function PanelCheckRange(_x1,_y1,_x2,_y2,_checkedId){
+function PanelCheckRangeSquare(_x1,_y1,_x2,_y2,_checkedId){
 		
 		var _validRange[]
 		//x and y vars are INCLUSIVE here

@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_WireFrameGrid1",
-    "path":"sprites/spr_WireFrameGrid1/spr_WireFrameGrid1.yy",
+    "name":"spr_OrchardIsoTile0",
+    "path":"sprites/spr_OrchardIsoTile0/spr_OrchardIsoTile0.yy",
   },
   "spriteMaskId":null,
   "visible":true,

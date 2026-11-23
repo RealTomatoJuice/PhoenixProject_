@@ -32,6 +32,7 @@
     {"$GMObjectProperty":"v2","%Name":"ap","filters":[],"listItems":[],"multiselect":false,"name":"ap","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"sp","filters":[],"listItems":[],"multiselect":false,"name":"sp","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"actionState","filters":[],"listItems":[],"multiselect":false,"name":"actionState","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"idle","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"gun","filters":[],"listItems":[],"multiselect":false,"name":"gun","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"pistola","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

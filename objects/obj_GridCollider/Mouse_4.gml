@@ -1,14 +1,14 @@
-show_debug_message(xCord)
-show_debug_message(yCord)
-show_debug_message(string(panelState))
+show_debug_message(oId.xCord)
+show_debug_message(oId.yCord)
+show_debug_message(string(oId.panelState))
 
-if(entity!=undefined){
-show_debug_message(entity.str)
-show_debug_message(entity.vig)
-show_debug_message(entity.mnd)
-show_debug_message(entity.spi)
-show_debug_message(entity.agi)
-show_debug_message(entity.lck)
+if(oId.entity!=undefined){
+show_debug_message(oId.entity.str)
+show_debug_message(oId.entity.vig)
+show_debug_message(oId.entity.mnd)
+show_debug_message(oId.entity.spi)
+show_debug_message(oId.entity.agi)
+show_debug_message(oId.entity.lck)
 }
 
-show_debug_message("In range?" + string(PanelCheckRange(global.activeCombatant.xCord-1,global.activeCombatant.yCord-1,global.activeCombatant.xCord+1,global.activeCombatant.yCord+1,id)))
+show_debug_message("In range?" + string(PanelCheckRangeSquare(global.activeCombatant.xCord-1,global.activeCombatant.yCord-1,global.activeCombatant.xCord+1,global.activeCombatant.yCord+1,oId)))
