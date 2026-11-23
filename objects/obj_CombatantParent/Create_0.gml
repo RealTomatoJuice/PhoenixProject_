@@ -31,5 +31,9 @@ spMax = 100
 sp = spMax
 meleeApCost = 3
 
+//test block to generate equipment
+
+
+
 
 

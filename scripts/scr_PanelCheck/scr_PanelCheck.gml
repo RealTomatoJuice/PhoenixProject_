@@ -17,7 +17,15 @@ function PanelCheckRangeSquare(_x1,_y1,_x2,_y2,_checkedId){
 			_iteration++
 			for(var _y = _y1 ; _y < _y2+1 ; _y++){
 				_iteration++
-				_validRange[_iteration] = obj_BattleController.battleGrid[_x,_y]
+				if(_x>array_length(obj_BattleController.battleGrid)-1||_x<0||_y>array_length(obj_BattleController.battleGrid[_x])-1||_y<0)
+				{
+				
+				}
+				else
+				{
+					_validRange[_iteration] = obj_BattleController.battleGrid[_x,_y]
+					obj_BattleController.battleGrid[_x,_y].pId.inRange = true
+				}
 			}
 		}
 		

@@ -51,6 +51,7 @@ equipmentArray[5] = {
 	range : 20,
 	damage : 40,
 	maxAmmo : 8,
+	ammo : 0,
 	ap : 0.5,
 	special : undefined
 }
