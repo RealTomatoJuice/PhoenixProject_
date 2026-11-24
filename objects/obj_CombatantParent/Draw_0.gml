@@ -20,4 +20,7 @@ draw_set_alpha(1)
 switch(actionState){
 	case("gun"):
 		draw_line_colour(x+16,y-16,global.targetPanel.pId.x+16,global.targetPanel.pId.y,c_red,c_red)
+		if(gun!=undefined){
+			draw_text(x-16,y-32,"Ammo: "+string(gun.ammo)+"/"+string(gun.maxAmmo))
+		}
 }

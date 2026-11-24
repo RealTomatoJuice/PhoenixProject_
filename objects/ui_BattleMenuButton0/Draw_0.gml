@@ -25,6 +25,15 @@ switch(state){
 		}
 	break;
 	
+	case("magic"):
+		if(position_meeting(mouse_x,mouse_y,self)){
+			draw_sprite_ext(spr_BattleMenuButton0,image_index,x,y,1,1,0,c_green,1);
+		}
+		else{
+			draw_self()
+		}
+	break;
+	
 	default:
 		draw_self()
 	break;

@@ -20,10 +20,16 @@ show_debug_message(turnOrder)
 //random generate equip gun test
 for(var _i = 0 ; _i < instance_number(obj_CombatantParent) ; _i++)
 {
+	var _assignId = instance_find(obj_CombatantParent,_i)
+	_assignId.spells[0] = init_spells.spellArray[0]
+	_assignId.spells[1] = init_spells.spellArray[1]
 	instance_find(obj_CombatantParent,_i).gun = init_equipment.equipmentArray[irandom_range(0,6)]
 	instance_find(obj_CombatantParent,_i).gun.ammo = irandom_range(round(instance_find(obj_CombatantParent,_i).gun.maxAmmo*0.3),instance_find(obj_CombatantParent,_i).gun.maxAmmo)
 }
 
+
+
+//camera and room settings
 combatCamera = camera_create_view(0,0,room_width/2,room_height/2)
 room_set_camera(rm_BattleZone,0,combatCamera)
 view_set_camera(0,combatCamera)

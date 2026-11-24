@@ -33,6 +33,14 @@ meleeApCost = 3
 
 //test block to generate equipment
 
+var _empty = {
+	name : "none"
+}
+
+for(var _i = 0 ; _i < 12 ; _i++){
+	spells[_i] = _empty
+}
+
 
 
 

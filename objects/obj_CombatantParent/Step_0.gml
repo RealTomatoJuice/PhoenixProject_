@@ -153,6 +153,27 @@ if(obj_BattleController.loadComplete==true)
 					actionState = "idle"
 				}
 			break;
+			
+			case("magic"):
+				if(deactivate == false){
+						instance_deactivate_object(ui_BattleMenuButton0)
+						instance_deactivate_object(ui_BattleMenu0)
+						deactivate = true
+						instance_create_depth(ui_BattleMenu0.x,ui_BattleMenu0.y,ui_BattleMenu0.depth,ui_MagicMenu0)
+				}
+				if(mouse_check_button(mb_right)){
+						actionState = "idle"
+						deactivate = false
+						instance_activate_object(ui_BattleMenu0)
+						instance_activate_object(ui_BattleMenuButton0)
+						instance_destroy(ui_MagicMenu0)
+						instance_destroy(ui_MagicMenuButton0)
+					}
+					
+				
+				
+				
+			break;
 		}
 		
 		

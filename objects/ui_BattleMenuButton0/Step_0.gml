@@ -24,6 +24,10 @@ switch(state){
 	case("magic"):
 		x = origin.x + 160
 		y = origin.y + 16
+		if(position_meeting(mouse_x,mouse_y,self)&&mouse_check_button_pressed(mb_left)){
+			global.activeCombatant.actionState = "magic"
+			show_debug_message("actionState changed")
+		}
 	break;
 	
 	case("guard"):
