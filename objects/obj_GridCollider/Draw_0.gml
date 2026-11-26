@@ -22,3 +22,7 @@ if(inRange=true){
 	}
 }
 
+if(oId.panelState=="wall"){
+	draw_sprite_ext(spr_OrchardIsoTile0,image_index,x,y,1,1,0,c_orange,0.5)
+}
+

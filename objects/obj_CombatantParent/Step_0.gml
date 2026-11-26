@@ -113,6 +113,7 @@ if(obj_BattleController.loadComplete==true)
 			
 			case("gun"):
 				if(gun!=undefined){
+					
 					if(deactivate == false){
 						instance_deactivate_object(ui_BattleMenuButton0)
 						instance_deactivate_object(ui_BattleMenu0)
@@ -128,6 +129,12 @@ if(obj_BattleController.loadComplete==true)
 					
 					var _rangeCheck = PanelCheckRangeSquare(xCord-gun.range,yCord-gun.range,xCord+gun.range,yCord+gun.range,global.targetPanel)
 					
+					if(gun.ammo < 1){
+						actionState = "idle"
+						gun = undefined
+						instance_activate_object(ui_BattleMenu0)
+						instance_activate_object(ui_BattleMenuButton0)
+					}
 					
 					if(mouse_check_button_pressed(mb_left)&&_rangeCheck&&global.targetPanel.occupied==true){
 						var _target = global.targetPanel.entity
@@ -139,10 +146,6 @@ if(obj_BattleController.loadComplete==true)
 						audio_play_sound(Sound2,1,false)
 						if(ap>apMax){
 							ap = apMax
-						}
-						if(gun.ammo <= 0){
-							actionState = "idle"
-							gun = undefined
 						}
 						instance_activate_object(ui_BattleMenu0)
 						instance_activate_object(ui_BattleMenuButton0)
@@ -161,21 +164,19 @@ if(obj_BattleController.loadComplete==true)
 						deactivate = true
 						instance_create_depth(ui_BattleMenu0.x,ui_BattleMenu0.y,ui_BattleMenu0.depth,ui_MagicMenu0)
 				}
-				if(mouse_check_button(mb_right)){
-						actionState = "idle"
-						deactivate = false
-						instance_activate_object(ui_BattleMenu0)
-						instance_activate_object(ui_BattleMenuButton0)
-						instance_destroy(ui_MagicMenu0)
-						instance_destroy(ui_MagicMenuButton0)
-					}
-					
-				
-				
-				
 			break;
 		}
 		
 		
 	}
+}
+
+if(hp<=0){
+	obj_BattleController.battleGrid[xCord,yCord].entity = undefined
+	obj_BattleController.battleGrid[xCord,yCord].occupied = false
+	var _idCheck = function(_element,_index){
+		return (_element == id)
+	}
+	array_delete(obj_BattleController.turnOrder,array_find_index(obj_BattleController.turnOrder,_idCheck),all)
+	instance_destroy(self)
 }
